@@ -114,6 +114,7 @@ def add_to_chroma(chunks: list[Document]):
             new_chunks.append(chunk)
 
     # add 1 doc every .2 seconds to avoid rate limit
+    # because persist() calls openai's API for embedding
     for i, chunk in enumerate(new_chunks):
         print(f"Adding document {i+1}/{len(new_chunks)}")
         db.add_documents([chunk])

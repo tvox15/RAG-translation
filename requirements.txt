@@ -9,3 +9,6 @@ typing_extensions==4.5.0
 pydantic==1.10.8
 xlrd
 langchain-openai==0.1.8 # For embeddings
+flask
+flask-cors
+requests
